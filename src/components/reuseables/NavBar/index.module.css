@@ -1,0 +1,44 @@
+
+
+.navBar{
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+
+
+}
+.navBar img{
+    height: 40px;
+    width: 40px;
+    margin-top: 15px;
+
+}
+.myBooks{
+    font-family: SF Pro Icons, serif;
+    font-size: 20px;
+    color: white;
+}
+
+.books{
+    display: flex;
+    flex-direction: row;
+    gap :35px;
+    margin-top: 10px;
+
+}
+
+.signUpAndLogin{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+

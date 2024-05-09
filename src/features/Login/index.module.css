@@ -1,0 +1,55 @@
+
+.login{
+
+    height: 30vh;
+    padding-top: 2px;
+    align-items: center;
+}
+.loginForm{
+    width: 30%;
+    height: 50vh;
+    border-radius: 10px;
+
+
+}
+
+.mainCont{
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap:40px
+
+}
+
+
+.input{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+    padding-left: 10px;
+
+
+}
+.input ::placeHolder{
+    width: 70px;
+    height: 30px;
+    padding-left: 30px;
+    border: 1px solid;
+
+}
+.mainCont button{
+    width: 320px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: orangered;
+    border: none;
+
+}
+
+.error{
+    border: 1px solid red;
+}
+
+

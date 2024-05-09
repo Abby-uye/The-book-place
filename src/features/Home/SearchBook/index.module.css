@@ -1,0 +1,94 @@
+
+.searchBook{
+    height: 25px;
+    width: 80%;
+    padding-top: 5px;
+    margin-top: 21px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-size: 18px;
+    border: 1px solid black;
+    font-family: Poppins, sans-serif;
+    outline: none;
+}
+
+.searchLogo{
+    z-index: 2;
+    justify-content: left ;
+    position: absolute;
+    top:33px;
+    left: 160px;
+    color: black;
+
+}
+
+.dropDownOptions{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 1;
+    top: 47px;
+    background-color: black;
+    border: 1px solid #696666;
+}
+
+
+.dropDownOptions a{
+    text-decoration: none;
+    color: white;
+}
+
+.search{
+    display: flex;
+    margin-top: 22px;
+    gap: 10px;
+    background-color: white;
+    height: 25px;
+    width: 50px;
+    padding-top: 5px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border: 1px solid white;
+    justify-content: center;
+    color: black;
+    flex-direction: row;
+    position: relative;
+
+
+}
+
+
+.searchBar{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    color: white;
+
+}
+.searchBook::placeholder{
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+    height: 35px;
+    padding-top: 5px;
+    width: 100%;
+
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.styleInput{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.mainCont{
+    display: flex;
+    flex-direction: row;
+}
