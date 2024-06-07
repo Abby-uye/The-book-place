@@ -14,19 +14,14 @@ const NavBar =()=>{
             <img src={logo} alt={""}/>
             <p className={style.myBooks}>My books</p>
             </div>
-            <div className={style.searchBar}>
-
-                <div className={style.styleInput}>
                    <SearchBook/>
 
-                </div>
-            </div>
                 <div className={style.signUpAndLogin}>
                     <Link  to={"/login"}>
-                        <button className={style.login}>Log In</button>
+                        <button className={style.btn}>Log In</button>
                     </Link>
                     <Link to={"/signup"}>
-                    <button className={style.signUp}>Sign Up</button>
+                    <button className={style.btn}>Sign Up</button>
                     </Link>
                 </div>
 

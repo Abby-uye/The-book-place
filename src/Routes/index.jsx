@@ -3,6 +3,7 @@ import Home from "../features/Home";
 import Login from "../features/Login";
 import SignUp from "../features/Home/SignUp";
 import DisplaySearchResults from "../features/Home/DisplaySearchResults";
+import DisplayReadingList from "../features/Home/DisplayReadingList";
 
 export const Routes =
 
@@ -19,6 +20,10 @@ export const Routes =
                      {
                          path: "/displayResults",
                          element: <DisplaySearchResults/>
+                     },
+                     {
+                         path: "/readingList",
+                         element: <DisplayReadingList/>
                      }
 
                  ]
@@ -29,7 +34,7 @@ export const Routes =
                 element: <Login/>
             },
             {
-                path: "/signup",
+                path: "/sign-up",
                 element: <SignUp/>
             }
 

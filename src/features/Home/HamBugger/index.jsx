@@ -2,6 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 import style from "./index.module.css"
 import {useState} from "react";
+import ReadingList from "../ReadingList";
 
 const HamBugger = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ const HamBugger = () => {
 
             <div className={`${style.menu} ${isOpen ? style.active : ''}`}>
                 <p>Home</p>
-                <p>Reading List</p>
+                <ReadingList/>
                 <p>Search Book</p>
             </div>
         </div>

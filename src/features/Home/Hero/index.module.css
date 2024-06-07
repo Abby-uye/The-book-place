@@ -1,6 +1,6 @@
 .hero{
 height: 80vh;
-    margin-top: 20px;
+    padding-top: 100px;
 }
 
 .slick-slider {
@@ -28,3 +28,5 @@ height: 80vh;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+

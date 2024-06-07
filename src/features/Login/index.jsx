@@ -21,7 +21,7 @@ const Login = ()=>{
                setErrorMessage("")
                 if (email !== null && password !== null) {
                     console.log(data.readerId)
-                    // navigate(`/search/${data.readerId}`)
+                     navigate("/")
                 }
             }
             else if (data.uErr){
@@ -59,6 +59,7 @@ const Login = ()=>{
                                    value={email}
                                    placeholder={"Enter your email"}
                                    onChange={handleEmail}
+                                   className={style.inputField}
 
                             />
                             {errorMessage && <span>{errorMessage}</span>}
@@ -68,6 +69,7 @@ const Login = ()=>{
                                    value={password}
                                    placeholder={"Enter your password"}
                                    onChange={handlePassword}
+                                   className={style.inputField}
                             />
                             {errorMessage && <span>{errorMessage}</span>}
                         </div>

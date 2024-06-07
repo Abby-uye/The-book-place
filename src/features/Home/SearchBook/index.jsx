@@ -10,20 +10,20 @@ const SearchBook = ()=>{
     const [books, setBooks] = useState([]);
     const [errorMessage, setErrorMessage] = useState("");
     const navigate = useNavigate()
+    const [readerId,setReaderId]= useState("")
 
     const [isOpen, setIsOpen] = useState(false);
     const toggleDropDown = ()=>{
         setIsOpen(!isOpen)
-    };
-
-useEffect(()=>{
-    localStorage.setItem("id",JSON.stringify({
-        value:'1',
-        expiry: new Date()
-    }))
-})
-
-    const readerId = JSON.parse(localStorage.getItem("id")).value;
+    }; useEffect(()=>{
+        const idObject = {
+            value: '2',
+            expiry: new Date('2024-09-15T12:00:00')
+        };
+        localStorage.setItem("id", JSON.stringify(idObject));
+        const storedId = JSON.parse(localStorage.getItem("id")).value;
+        setReaderId(storedId);
+    },[])
     const handleSearch = async  (event)=> {
         event.preventDefault()
         try {
@@ -41,6 +41,7 @@ useEffect(()=>{
             if (response.ok){
 
                 const data = await response.json()
+                console.log(data)
                  setBooks(data.books)
                 setErrorMessage("")
                  navigate("/displayResults",{ state: { books: data.books } })
@@ -75,14 +76,14 @@ return(
                 <FontAwesomeIcon icon={faAngleDown}/>
             </div>
 
-            {/*{isOpen && (*/}
-            {/*    <div className={style.dropDownOptions}>*/}
-            {/*        <a href="#" onClick={() => handleOptionSelect("title")}>Title</a>*/}
-            {/*        <a href="#" onClick={() => handleOptionSelect("authors")}>Author</a>*/}
-            {/*        <a href="#" onClick={() => handleOptionSelect("subjects")}>Subject</a>*/}
-            {/*        <a href="#" onClick={() => handleOptionSelect("advanced")}>Advanced</a>*/}
-            {/*    </div>*/}
-            {/*)}*/}
+            {isOpen && (
+                <div className={style.dropDownOptions}>
+                    <a href="#" onClick={() => handleBookSearch("title")}>Title</a>
+                    <a href="#" onClick={() => handleBookSearch("authors")}>Author</a>
+                    <a href="#" onClick={() => handleBookSearch("subjects")}>Subject</a>
+                    <a href="#" onClick={() => handleBookSearch("advanced")}>Advanced</a>
+                </div>
+            )}
         </div>
         <div className={style.styleInput}>
         <input
@@ -92,11 +93,9 @@ return(
             onChange={handleBookSearch}
             className={style.searchBook}
         />
-            <button
-            onClick={handleSearch}
-            >
-        <FontAwesomeIcon icon={faSearch} className={style.searchLogo}/>
-            </button>
+
+        <FontAwesomeIcon   onClick={handleSearch} icon={faSearch} className={style.searchLogo}/>
+
         </div>
     </div>
 
