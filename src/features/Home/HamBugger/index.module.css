@@ -1,4 +1,3 @@
-
 .faTimes{
     color:black;
     margin-top: 30px;
@@ -13,29 +12,24 @@
     height: 25px;
 }
 
-
-
-
-
 .menu {
     position: absolute;
     top: 50px;
-    left: 0;
+
     z-index: 1;
     width: 30%;
-    height: 100%;
+    height: 200vh;
     background-color: #fff;
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
-    transform: translateX(-100%); /* Initially hide the menu off-screen */
+    transition: transform 0.3s ease;
+    transform: translateX(100%); /* Change from translateX(-100%) to translateX(100%) */
 }
 
 .menu.active {
-    transform: translateX(0); /* Show the menu when active */
+    transform: translateX(0);
 }
-
 
 .menu p {
     display: block;
